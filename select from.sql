@@ -1,3 +1,5 @@
+
+use employees;
 SELECT 
     dept_no
 FROM
