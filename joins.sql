@@ -18,11 +18,11 @@ join  dept_emp as d on d.emp_no=a.emp_no
 limit 100;
 
 
-alter table departments_dup
+alter table departments_dup;
 
 
 alter table departments_dup
-drop column dept_manager
+drop column dept_manager;
 
 
 

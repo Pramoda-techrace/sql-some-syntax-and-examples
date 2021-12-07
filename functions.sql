@@ -12,7 +12,7 @@ delimiter ;
 select f_emp_avg_salary(11300);
 
 use employees;
-
+dept_manager
 delimiter $$
 create function f_emp_info(f_first_name varchar(14), f_last_name varchar(15)) returns  decimal(12,2)
 deterministic no sql reads sql data
@@ -33,5 +33,3 @@ end $$
 delimiter ;
 
 select f_emp_info('aruna',"journel");
-
-

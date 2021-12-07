@@ -12,6 +12,7 @@ end if;
 end $$
 delimiter ;
 
+insert into salaries (emp_no, from_date,to_date,salary) values (10001,'1986-07-26','1987-06-26',-19000);
 select * from salaries
 where emp_no = '10001';
 
@@ -37,7 +38,7 @@ where emp_no = '10001' and from_date = '2010-06-22';
 
 select* from salaries
 where emp_no = 10001 and from_date = '2010-06-22' ;
-
+use employees;
 delimiter $$
 create trigger trig_ins_dept_mng
 after insert on dept_manager
@@ -64,7 +65,15 @@ delimiter ;
 insert into dept_manager values ('111534','d009',date_format(sysdate(),'%y-%m-%d'),'9999-01-01');
 
 select * from dept_manager 
+
+
+
 where emp_no = 111534;
+
+set global max_connections = 1;
+set @@global.max_connections=1;
+
+
 
 select * from salaries 
 where emp_no = 111534;

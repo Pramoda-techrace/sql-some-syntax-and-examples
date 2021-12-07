@@ -1,6 +1,6 @@
 create index i_hire_date on employees(hire_date);
 
-select * from employees;
+select hire_date from employees;
 
 alter table employees
 drop index i_hire_date;
@@ -13,3 +13,10 @@ create index salary on salaries(salary);
 
 alter table salaries
 drop index salary;
+
+
+select salary from salaries;
+
+
+
+

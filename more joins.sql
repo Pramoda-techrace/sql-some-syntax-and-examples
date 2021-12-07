@@ -24,8 +24,15 @@ group by gender;
 
 select e.emp_no,e.first_name,e.last_name,null as dept_no, null as dept_name from employees e 
 where e.emp_no = 10001
-union all select null as emp_no,null as first_name , null as last_name,m.dept_no,m.from_date from dept_manager m
+union all 
+select null as emp_no,null as first_name , null as last_name,m.dept_no,m.from_date from dept_manager m
 ;
+
+use employees;
+select e.emp_no, e.dept_no,  e.from_date,e.to_date,null as dept_name from dept_emp e
+union all 
+select null as emp_no, m.dept_no, null as from_date, null as to_date ,m.dept_name from departments m
+limit 100;
 
 
 

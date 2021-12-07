@@ -20,3 +20,15 @@ select e.*, d.* from employees e
 cross join departments d
 where e.emp_no <10011
 order by e.emp_no,d.dept_name;
+
+
+select e.*,m.* from employees e
+cross join titles m
+limit 100;
+
+
+
+
+
+
+

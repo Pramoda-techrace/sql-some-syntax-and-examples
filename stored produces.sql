@@ -8,3 +8,4 @@ begin
 end $$
 DELIMITER ;
  
+ call select_employees;

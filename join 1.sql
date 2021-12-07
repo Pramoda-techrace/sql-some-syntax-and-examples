@@ -42,7 +42,7 @@ insert into dept_manager_dup select * from dept_manager;
 select * from dept_manager_dup;
 
 insert into dept_manager_dup (emp_no,from_date) values 
-(999904,'2017-01-01'),(999905,'2017-01-01'),(999906,'2017-01-01'),(999907,'2017-01-01')
+(999904,'2017-01-01'),(999905,'2017-01-01'),(999906,'2017-01-01'),(999907,'2017-01-01');
 
 DELETE FROM  dept_manager_dup
 where dept_no = 'd001'; 

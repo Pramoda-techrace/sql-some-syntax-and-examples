@@ -1,7 +1,7 @@
 SELECT 
     SUM(salary)
 FROM
-    salaries;
+	salaries;
 
 select sum(salary) from salaries
 where from_date > '1997-01-01';
@@ -47,5 +47,14 @@ ifnull(dept_no, 'N/A' )as dept_no ,
 ifnull(dept_name,'department name not provided') as dept_name, 
 coalesce(dept_no,dept_name) as dept_info 
 from departments_dup;
+
+
+select emp_no,dept_no,manager_no,coalesce(dept_no,'d100') from emp_manager
+order by emp_no desc;
+
+select * from emp_manager;
+
+insert into emp_manager(emp_no,manager_no) values(10056,110089);
+
 
 select * from departments_dup;

@@ -10,7 +10,9 @@ where p_emp_no = e.emp_no;
 end $$
 delimiter ;
 
-call emp_salary(11300);
+set @p_emp_no=0;
+call emp_salary(11300,@p_emp_no);
+select @p_emp_no;
 
 
 
